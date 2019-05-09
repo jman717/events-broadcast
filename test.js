@@ -33,39 +33,63 @@ logger = log4js.getLogger('myLog')
 append = tagline.appender('line')
 lne = new append(tagline).setConfig({ "format": "lne(@name(): @file:@line:@column)" })
 
-console.log('jrm debug 88.00')
-logger.debug('show this line').tag(lne).tagline()
+logger.debug('start of test').tag(lne).tagline()
 
 var eb = new events_broadcast()
     .set({ "group": { "name": "group-1", "events": [{ "event": "refresh", "id": 1 }, { "event": "two", "id": 2 }] } })
     .set({ "group": { "name": "group-2", "events": [{ "event": "one", "id": 1 }, { "event": "two", "id": 2 }, { "event": "refresh", "id": 3 }] } })
     .set({ "group": { "name": "group-3", "events": [{ "event": "refresh", "id": 1 }] } })
-    .init()
-    .on({ "groups": "all", "events": "all" }, function ({ response }) {
-
-    }).error(function (err) {
-
-    })
-    .on({ "groups": "all", "events": ["refresh"] }, function ({ response }) {
-
-    })
-    .on({ "groups": ["group-1"], "events": ["one", "two"] }, function ({ response }) {
-
-    })
-    .do({ "groups": "all", "emit": "all" })
-    .do({ "groups": "all", "emit": ["refresh"] })
-    .do({ "groups": ["group-2"], "emit": ["two"] })
-    .do({ "groups": ["group-1"], "emit": "all" })
-    .error(function (errArray) {
-        console.log('jrm debug 22.00 error')
-        console.log('ERRORS:')
+    .error(function (errorArray) {
         errorArray.forEach(function (item) {
-            console.log("   " + item)
+            logger.error(item).tag(lne).tagline()
         })
-
     }).success(function (data) {
-        console.log('jrm debug 22.01 error')
-
+        logger.info(data).tag(lne).tagline()
+    })
+    .on({ "groups": "all", "events": "all" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
+    })
+    /*
+    .on({ "groups": "all", "events": "refresh" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
+    })
+    .on({ "groups": "all", "events": "one" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
+    })
+    .on({ "groups": "all", "events": "two" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
+    })
+    .on({ "groups": "group-2", "events": "one" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
+    })
+    .on({ "groups": "group-2", "events": "refresh" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
+    })
+    .on({ "groups": "group-1", "events": "refresh" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
     })
 
-console.log('done'.blue)
+    .on({ "groups": "all", "events": "all" }, function (data) {
+        var d = JSON.stringify(data)
+        logger.info(d).tag(lne).tagline()
+    })
+   .on({ "groups": ["group-1", "group-2"], "events": ["one", "refresh"] }, function (data) {
+        var d = "This is ONE, REFRESH processing(" + JSON.stringify(data) + ")"
+        logger.info(d).tag(lne).tagline()
+    })
+    */
+    .do({ "groups": "all", "emit": ["refresh"] })
+    //.do({ "groups": "all", "emit": "all" })
+    //.do({ "groups": ["group-1", "group-2"], "emit": ["one", "refresh"] })
+    .do({ "groups": "all", "emit": ["one", "two"] })
+    //.do({ "groups": "["group-1", "group-2"]", "emit": ["one", "refresh"] })
+    .do({ "groups": ["group-2"], "emit": ["two"] })
+    .done()
+

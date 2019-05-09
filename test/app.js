@@ -25,7 +25,7 @@ describe('app', function () {
             try {
                 assert.throws(() => app = new events_broadcast(), Error)
             } catch (e) {
-                console.log('jrm debug error(' + e.message + ')')
+                console.log('error(' + e.message + ')')
             }
         })
 
@@ -36,10 +36,7 @@ describe('app', function () {
         describe('functions', function () {
             beforeEach(function () {
                 app = new events_broadcast()
-            })
-
-            it('app.init should pass', function () {
-                assert(app.init)
+                app.reject = function () { assert(false) }
             })
 
             it('app.set should fail with bogus parameter', function () {
@@ -66,8 +63,8 @@ describe('app', function () {
             })
 
             it('app.on should pass with parameter', function () {
-                var params = { "groups": {}, "events": {} }
-                var callback = function(){}
+                var params = { "groups": ["all"], "events": ["all"] }
+                var callback = function () { }
                 assert(app.on(params, callback))
             })
 
@@ -80,7 +77,7 @@ describe('app', function () {
             })
 
             it('app.error should pass with parameter', function () {
-                var callback = function(){}
+                var callback = function () { }
                 assert(app.error(callback))
             })
 
@@ -93,10 +90,10 @@ describe('app', function () {
             })
 
             it('app.success should pass with parameter', function () {
-                var callback = function(){}
+                var callback = function () { }
                 assert(app.success(callback))
             })
- 
+
             it('app.do should fail with bogus parameter', function () {
                 var param = { "bogus": {} }
                 assert.throws(() => app.do(param), Error)
@@ -107,11 +104,24 @@ describe('app', function () {
             })
 
             it('app.do should pass with parameter', function () {
-                var params = { "groups": {}, "events": {} }
-                var callback = function(){}
+                var params = { "groups": ["all"], "emit": ["all"] }
+                var callback = function () { }
                 assert(app.do(params, callback))
             })
 
+            it('app.addError should fail with bogus parameter', function () {
+                var param = {}
+                assert.throws(() => app.addError(param), Error)
+            })
+
+            it('app.addError should pass', function () {
+                assert(app.addError)
+            })
+
+            it('app.addError should pass with parameter', function () {
+                var error = "This is an error"
+                assert(app.addError(error))
+            })
         })
     })
 })
