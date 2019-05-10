@@ -37,7 +37,7 @@ Example local_test
 var colors = require('colors'),
     log4js = require("log4js"),
     log4js_tagline = require("log4js-tagline"),
-    events_broadcast = require('./app.js'),
+    events_broadcast = require('events-broadcast'),
     tagline,
     logger,
     append,
