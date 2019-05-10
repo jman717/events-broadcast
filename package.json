@@ -8,7 +8,7 @@
     "colors": "*",
     "log4js-tagline": "^2.1.2",
     "mocha": "^5.2.0"
-  },
+},
   "scripts": {
     "start": "node app.js",
     "local_test": "node test.js",
@@ -28,5 +28,5 @@
   "main": "app.js",
   "name": "events-broadcast",
   "start": "node app.js",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

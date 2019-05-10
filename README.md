@@ -1,6 +1,6 @@
 
 
-events-broadcast leverages events broadcast in combination with other events, singly, or to all.
+events-broadcast leverages events to broadcast singly, in combination, or to all selected events.
 
 Included tag appenders:
 
@@ -17,7 +17,6 @@ Usage
 ---------
 ```js
 var eb = require("events-broadcast"),
-
 
 ```
 
