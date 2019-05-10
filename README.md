@@ -124,14 +124,14 @@ var eb = new events_broadcast()
 
 Example events-broadcast output
 ---------
-[debug] myLog - (msg: start of test) lne(<anonymous>(): events-broadcast/test.js:36:8)
-[info] myLog - (msg: {"name":"group-1","event":{"event":"refresh","id":1}}) lne(callback(): events-broadcast/test.js:51:16)
-[info] myLog - (msg: {"name":"group-2","event":{"event":"refresh","id":3}}) lne(callback(): events-broadcast/test.js:51:16)
-[info] myLog - (msg: {"name":"group-3","event":{"event":"refresh","id":1}}) lne(callback(): events-broadcast/test.js:51:16)
-[info] myLog - (msg: {"name":"group-1","event":{"event":"two","id":2}}) lne(callback(): events-broadcast/test.js:51:16)
-[info] myLog - (msg: {"name":"group-2","event":{"event":"one","id":1}}) lne(callback(): events-broadcast/test.js:51:16)
-[info] myLog - (msg: {"name":"group-2","event":{"event":"two","id":2}}) lne(callback(): events-broadcast/test.js:51:16)
-[info] myLog - (msg: {"name":"group-2","event":{"event":"two","id":2}}) lne(callback(): events-broadcast/test.js:51:16)
-[info] myLog - (msg: success done) lne(success_callback(): events-broadcast/test.js:47:16)
-
+```
+[2019-05-09T17:21:11.289] [debug] myLog - (msg: start of test) lne(<anonymous>(): events-broadcast/test.js:36:8)
+[2019-05-09T17:21:11.316] [info] myLog - (msg: {"name":"group-1","event":{"event":"refresh","id":1}}) lne(callback(): events-broadcast/test.js:51:16)
+[2019-05-09T17:21:11.317] [info] myLog - (msg: {"name":"group-2","event":{"event":"refresh","id":3}}) lne(callback(): events-broadcast/test.js:51:16)
+[2019-05-09T17:21:11.319] [info] myLog - (msg: {"name":"group-3","event":{"event":"refresh","id":1}}) lne(callback(): events-broadcast/test.js:51:16)
+[2019-05-09T17:21:11.321] [info] myLog - (msg: {"name":"group-1","event":{"event":"two","id":2}}) lne(callback(): events-broadcast/test.js:51:16)
+[2019-05-09T17:21:11.323] [info] myLog - (msg: {"name":"group-2","event":{"event":"one","id":1}}) lne(callback(): events-broadcast/test.js:51:16)
+[2019-05-09T17:21:11.327] [info] myLog - (msg: {"name":"group-2","event":{"event":"two","id":2}}) lne(callback(): events-broadcast/test.js:51:16)
+[2019-05-09T17:21:11.330] [info] myLog - (msg: {"name":"group-2","event":{"event":"two","id":2}}) lne(callback(): events-broadcast/test.js:51:16)
+[2019-05-09T17:21:11.331] [info] myLog - (msg: success done) lne(success_callback(): events-broadcast/test.js:47:16)
 ```
