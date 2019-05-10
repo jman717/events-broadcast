@@ -2,10 +2,6 @@
 
 events-broadcast leverages events to broadcast singly, in combination, or to all selected events.
 
-Included tag appenders:
-
-* event - to display path or service name
-
 
 Installation
 ---------
