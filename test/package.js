@@ -10,18 +10,19 @@ const packageMock = {
   "dependencies": {
     "chai": "^4.2.0",
     "colors": "*",
-    "log4js-tagline": "^2.1.2",
+    "log4js-tagline": "^2.1.3",
     "mocha": "^5.2.0"
-  },
+},
   "scripts": {
     "start": "node app.js",
+    "local_test": "node test.js",
     "test": "mocha"
   },
   "keywords": [
     "events",
     "broadcast",
-    "appenders",
     "node",
+    "log4js",
     "log4js-tagline"
   ],
   "deprecated": false,
@@ -31,7 +32,7 @@ const packageMock = {
   "main": "app.js",
   "name": "events-broadcast",
   "start": "node app.js",
-  "version": "1.0.0"
+  "version": "1.0.5"
 }
 
 describe('package.json', function () {
