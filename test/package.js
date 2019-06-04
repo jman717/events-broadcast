@@ -10,7 +10,7 @@ const packageMock = {
   "dependencies": {
     "chai": "^4.2.0",
     "colors": "*",
-    "log4js-tagline": "^2.1.3",
+    "log4js-tagline": "^2.1.4",
     "mocha": "^5.2.0"
 },
   "scripts": {
