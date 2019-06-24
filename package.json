@@ -6,7 +6,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "colors": "*",
-    "log4js-tagline": "^2.1.7",
+    "log4js-tagline": "^2.1.8",
     "mocha": "^6.1.4"
 },
   "scripts": {
