@@ -10,7 +10,7 @@ const packageMock = {
   "dependencies": {
     "chai": "^4.2.0",
     "colors": "*",
-    "log4js-tagline": "^2.1.5",
+    "log4js-tagline": "^2.1.11",
     "mocha": "^6.1.4"
 },
   "scripts": {
@@ -32,7 +32,7 @@ const packageMock = {
   "main": "app.js",
   "name": "events-broadcast",
   "start": "node app.js",
-  "version": "1.0.8"
+  "version": "1.0.13"
 }
 
 describe('package.json', function () {
