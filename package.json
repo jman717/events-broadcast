@@ -6,7 +6,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "colors": "*",
-    "log4js-tagline": "^2.1.10",
+    "log4js-tagline": "^2.1.11",
     "mocha": "^6.1.4"
 },
   "scripts": {
@@ -28,5 +28,5 @@
   "main": "app.js",
   "name": "events-broadcast",
   "start": "node app.js",
-  "version": "1.0.12"
+  "version": "1.0.13"
 }
