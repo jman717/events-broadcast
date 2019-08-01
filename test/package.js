@@ -10,21 +10,28 @@ const packageMock = {
   "dependencies": {
     "chai": "^4.2.0",
     "colors": "*",
-    "log4js-tagline": "^2.1.11",
-    "mocha": "^6.1.4"
-},
+    "log4js-tagline": "^2.1.18",
+    "mocha": "^6.2.0"
+  },
   "scripts": {
     "start": "node app.js",
     "local_test": "node test.js",
     "test": "mocha"
   },
   "keywords": [
+    "logging",
+    "log",
+    "log4js-tagline",
+    "appenders",
     "events",
     "broadcast",
-    "node",
-    "log4js",
-    "log4js-tagline"
+    "node"
   ],
+  "homepage": "https://github.com/jman717/events-broadcast",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jman717/events-broadcast.git"
+  },
   "deprecated": false,
   "description": "broadcast events",
   "email": "jrman@risebroadband.net",
@@ -32,7 +39,7 @@ const packageMock = {
   "main": "app.js",
   "name": "events-broadcast",
   "start": "node app.js",
-  "version": "1.0.13"
+  "version": "1.0.16"
 }
 
 describe('package.json', function () {
