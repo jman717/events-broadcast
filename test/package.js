@@ -39,7 +39,7 @@ const packageMock = {
   "main": "app.js",
   "name": "events-broadcast",
   "start": "node app.js",
-  "version": "1.0.19"
+  "version": "1.0.20"
 }
 
 describe('package.json', function () {
