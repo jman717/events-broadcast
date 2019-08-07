@@ -8,3 +8,8 @@
 [2019-08-01T16:45:37.634] [info] myLog - (msg: {"name":"group-2","event":{"event":"refresh","id":3}}) lne(callback(): events-broadcast/test.js:52:16)
 [2019-08-01T16:45:37.635] [info] myLog - (msg: {"name":"group-3","event":{"event":"refresh","id":1}}) lne(callback(): events-broadcast/test.js:52:16)
 [2019-08-01T16:45:37.636] [info] myLog - (msg: success done) lne(success_callback(): events-broadcast/test.js:48:16)
+[2019-08-06T20:38:21.059] [debug] myLog - (msg: start of test) lne(<anonymous>(): events-broadcast/test.js:37:8)
+[2019-08-06T20:38:21.062] [info] myLog - (msg: {"name":"group-1","event":{"event":"refresh","id":1}}) lne(callback(): events-broadcast/test.js:52:16)
+[2019-08-06T20:38:21.062] [info] myLog - (msg: {"name":"group-2","event":{"event":"refresh","id":3}}) lne(callback(): events-broadcast/test.js:52:16)
+[2019-08-06T20:38:21.063] [info] myLog - (msg: {"name":"group-3","event":{"event":"refresh","id":1}}) lne(callback(): events-broadcast/test.js:52:16)
+[2019-08-06T20:38:21.064] [info] myLog - (msg: success done) lne(success_callback(): events-broadcast/test.js:48:16)
