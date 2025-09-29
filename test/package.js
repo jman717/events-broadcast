@@ -6,12 +6,14 @@ const packageMock = {
   "author": {
     "name": "jim manton"
   },
+  "version": "1.0.25",
   "bundleDependencies": false,
   "dependencies": {
-    "chai": "^4.3.4",
+    "chai": "^5.0.0",
     "colors": "^1.4.0",
-    "log4js-tagline": "^2.3.8",
-    "mocha": "^8.3.2"
+    "log4js-tagline": "^5.3.27",
+    "compare-json-difference": "^0.1.3",
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "start": "node app.js",
@@ -38,8 +40,7 @@ const packageMock = {
   "license": "ISC",
   "main": "app.js",
   "name": "events-broadcast",
-  "start": "node app.js",
-  "version": "1.0.23"
+  "start": "node app.js"
 }
 
 describe('package.json', function () {

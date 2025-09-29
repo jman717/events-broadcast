@@ -1,7 +1,11 @@
+[![npm Package](https://img.shields.io/npm/v/event-broadcast.svg)](https://www.npmjs.org/package/event-broadcast)
+[![License](https://img.shields.io/npm/l/event-broadcast.svg)](https://github.com/jman717/event-broadcast/blob/master/LICENSE)
+[![CodeQL](https://github.com/jman717/event-broadcast/actions/workflows/actions.yml/badge.svg)](https://github.com/jman717/event-broadcast/actions/workflows/actions.yml)
+[![Node.js CI](https://github.com/jman717/event-broadcast/actions/workflows/node.js.yml/badge.svg)](https://github.com/jman717/event-broadcast/actions/workflows/node.js.yml)
 
+[![NPM](https://nodei.co/npm/event-broadcast.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/event-broadcast/)
 
 events-broadcast leverages events to broadcast singly, in combination, or to all selected events.
-
 
 Installation
 ---------
@@ -35,9 +39,8 @@ Example local_test
 */
 
 var colors = require('colors'),
-    log4js = require("log4js"),
     log4js_tagline = require("log4js-tagline"),
-    events_broadcast = require('events-broadcast'),
+    events_broadcast = require('./app.js'),
     tagline,
     logger,
     append,
@@ -52,7 +55,17 @@ log4js.configure({
 tagline = new log4js_tagline(log4js, {
     "display": ["trace", "debug", "info", "warn", "error", "fatal", "mark"],
     "output": {
-        "to_console": { "show": true, "color": "yellow" },      /* send output to console.log */
+        "to_console": {
+            "show": true, "color": {
+                "trace": "blue",
+                "debug": "bgCyan",
+                "info": "blue",
+                "warn": "yellow",
+                "error": "red",
+                "fatal": "red",
+                "mark": "white"
+            }
+        },      /* send output to console.log */
         "to_local_file": true,
         "to_datadog": true
     }
@@ -117,9 +130,9 @@ var eb = new events_broadcast()
     .do({ "groups": "all", "emit": ["refresh"] })
     //.do({ "groups": "all", "emit": "all" })
     //.do({ "groups": ["group-1", "group-2"], "emit": ["one", "refresh"] })
-    .do({ "groups": "all", "emit": ["one", "two"] })
+    //.do({ "groups": "all", "emit": ["one", "two"] })
     //.do({ "groups": "["group-1", "group-2"]", "emit": ["one", "refresh"] })
-    .do({ "groups": ["group-2"], "emit": ["two"] })
+    //.do({ "groups": ["group-2"], "emit": ["two"] })
     .done()
 ```
 
