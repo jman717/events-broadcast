@@ -1,9 +1,9 @@
-[![npm Package](https://img.shields.io/npm/v/event-broadcast.svg)](https://www.npmjs.org/package/event-broadcast)
-[![License](https://img.shields.io/npm/l/event-broadcast.svg)](https://github.com/jman717/event-broadcast/blob/master/LICENSE)
-[![CodeQL](https://github.com/jman717/event-broadcast/actions/workflows/actions.yml/badge.svg)](https://github.com/jman717/event-broadcast/actions/workflows/actions.yml)
-[![Node.js CI](https://github.com/jman717/event-broadcast/actions/workflows/node.js.yml/badge.svg)](https://github.com/jman717/event-broadcast/actions/workflows/node.js.yml)
+[![npm Package](https://img.shields.io/npm/v/events-broadcast.svg)](https://www.npmjs.org/package/events-broadcast)
+[![License](https://img.shields.io/npm/l/events-broadcast.svg)](https://github.com/jman717/events-broadcast/blob/master/LICENSE)
+[![CodeQL](https://github.com/jman717/events-broadcast/actions/workflows/actions.yml/badge.svg)](https://github.com/jman717/events-broadcast/actions/workflows/actions.yml)
+[![Node.js CI](https://github.com/jman717/events-broadcast/actions/workflows/node.js.yml/badge.svg)](https://github.com/jman717/events-broadcast/actions/workflows/node.js.yml)
 
-[![NPM](https://nodei.co/npm/event-broadcast.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/event-broadcast/)
+[![NPM](https://nodei.co/npm/events-broadcast.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/events-broadcast/)
 
 events-broadcast leverages events to broadcast singly, in combination, or to all selected events.
 
