@@ -65,6 +65,4 @@ jobs:
       run: npm ls --depth=0 --dev && npm ls --depth=0 --prod
 
     - run: npm run build --if-present
-    - run: npm run test_basic
-    - run: npm run test_qAll
-    - run: npm run test_qjAll
+    - run: npm run test
