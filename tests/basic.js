@@ -7,8 +7,9 @@
 */
 
 var colors = require('colors'),
+    log4js = require("log4js"),
     log4js_tagline = require("log4js-tagline"),
-    events_broadcast = require('./app.js'),
+    events_broadcast = require('../app.js'),
     tagline,
     logger,
     append,
@@ -69,6 +70,7 @@ var eb = new events_broadcast()
         var d = JSON.stringify(data)
         logger.info(d).tag(lne).tagline()
     })
+    /*
     .on({ "groups": "all", "events": "two" }, function (data) {
         var d = JSON.stringify(data)
         logger.info(d).tag(lne).tagline()
@@ -95,7 +97,7 @@ var eb = new events_broadcast()
         logger.info(d).tag(lne).tagline()
     })
     */
-    .do({ "groups": "all", "emit": ["refresh"] })
+    .do({ "groups": "all", "emit": ["all"] })
     //.do({ "groups": "all", "emit": "all" })
     //.do({ "groups": ["group-1", "group-2"], "emit": ["one", "refresh"] })
     //.do({ "groups": "all", "emit": ["one", "two"] })

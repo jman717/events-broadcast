@@ -6,7 +6,7 @@ const packageMock = {
   "author": {
     "name": "jim manton"
   },
-  "version": "1.0.29",
+  "version": "1.0.30",
   "bundleDependencies": false,
   "dependencies": {
     "chai": "^5.0.0",
@@ -17,7 +17,7 @@ const packageMock = {
   },
   "scripts": {
     "start": "node app.js",
-    "local_test": "node test.js",
+    "basic": "node ./tests/basic",
     "test": "mocha"
   },
   "keywords": [

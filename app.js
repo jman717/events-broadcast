@@ -1,5 +1,7 @@
 "use strict"
 
+const { stringify } = require('querystring')
+
 /*
 * @author Jim Manton: jrman@risebroadband.net
 * @since 2019-04-24
@@ -194,6 +196,7 @@ module.exports = class Broadcast {
             }
             groups_a.forEach(function (gpa) {
                 t.groups.forEach(function (grp) {
+
                     g_include = false
                     if (gpa == "all")
                         g_include = true
