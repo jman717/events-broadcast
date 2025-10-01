@@ -212,13 +212,19 @@ module.exports = class Broadcast {
                                     e_include = true
                                 if (evt.event == em)
                                     e_include = true
-
                                 if (e_include) {
                                     params.name = grp.name
                                     params.event = evt
 
                                     ev = grp.name + '_' + evt.event
                                     t.events.emit(ev, params)
+                                    try {
+                                        if (typeof (evt.function) == "function") {
+                                            evt.function(evt)
+                                        }
+                                    } catch (e) {
+                                        //do nothing
+                                    }
                                 }
                             })
                         })
