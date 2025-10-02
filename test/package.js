@@ -6,7 +6,7 @@ const packageMock = {
   "author": {
     "name": "jim manton"
   },
-  "version": "2.0.14",
+  "version": "2.0.15",
   "bundleDependencies": true,
   "dependencies": {
     "chai": "^5.0.0",
@@ -14,9 +14,6 @@ const packageMock = {
     "log4js-tagline": "^5.3.27",
     "compare-json-difference": "^0.1.3",
     "mocha": "^10.2.0"
-  },
-  "devDependencies": {
-    "chai": "^5.0.0"
   },
   "scripts": {
     "start": "node app.js",
