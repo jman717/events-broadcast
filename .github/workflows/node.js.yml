@@ -42,16 +42,6 @@ jobs:
         npm -v
         npmMajorVer=$(npm -v | cut -d. -f1)
         echo "major=$npmMajorVer" >> $GITHUB_OUTPUT
-
-    - name: Configure npm
-      run: npm config set loglevel error
-
-    - name: Get npm version
-      id: npm-version
-      run: |
-        npm -v
-        npmMajorVer=$(npm -v | cut -d. -f1)
-        echo "major=$npmMajorVer" >> $GITHUB_OUTPUT
     - name: Disable prettier on older Node.js (8.x, 10.x, 12.x)
       run: |
         sed -i '/"prettier": "prettier/d' package.json
