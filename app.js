@@ -219,7 +219,7 @@ module.exports = class Broadcast {
                                     ev = grp.name + '_' + evt.event
                                     t.events.emit(ev, params)
                                     try {
-                                        if (typeof (evt.function) == "function") {
+                                        if (typeof evt.function == "function") {
                                             evt.function(evt)
                                         }
                                     } catch (e) {
