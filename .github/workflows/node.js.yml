@@ -29,13 +29,13 @@ jobs:
             npm-i: "eslint@6.x eslint-config-airbnb-base@14.x eslint-config-prettier@6.x eslint-plugin-prettier@3.x fs-extra@8.x nyc@14.x tap@14.x chai@5.x colors@1.x compare-json-difference@0.x log4js-tagline@5.x mocha@10.x"
 
           - node-version: 10.x
-            npm-i: "eslint@7.x fs-extra@9.x nyc@14.x tap@14.x"
+            npm-i: "eslint@7.x fs-extra@9.x nyc@14.x tap@14.x chai@5.x colors@1.x compare-json-difference@0.x log4js-tagline@5.x mocha@10.x"
 
           - node-version: 12.x
-            npm-i: "fs-extra@10.x nyc@14.x tap@14.x"
+            npm-i: "fs-extra@10.x nyc@14.x tap@14.x chai@5.x colors@1.x compare-json-difference@0.x log4js-tagline@5.x mocha@10.x"
 
           - node-version: 14.x
-            npm-i: "nyc@14.x tap@14.x"
+            npm-i: "nyc@14.x tap@14.x chai@5.x colors@1.x compare-json-difference@0.x log4js-tagline@5.x mocha@10.x"
 
     steps:
     - uses: actions/checkout@v3
