@@ -26,7 +26,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
         include:
           - node-version: 8.x
-            npm-i: "chai@8.x"
+            npm-i: "chai@4.x"
 
     steps:
     - uses: actions/checkout@v3
