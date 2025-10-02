@@ -6,7 +6,7 @@ const packageMock = {
   "author": {
     "name": "jim manton"
   },
-  "version": "2.0.13",
+  "version": "2.0.14",
   "bundleDependencies": true,
   "dependencies": {
     "chai": "^5.0.0",
@@ -46,6 +46,7 @@ const packageMock = {
   "name": "events-broadcast",
   "start": "node app.js"
 }
+
 describe('package.json', function () {
     it('should pass', function () {
         assert(!jsonHasDifferences(packagejson, packageMock, true))
