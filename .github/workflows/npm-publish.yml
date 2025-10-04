@@ -14,6 +14,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Set Git User Identity
+        run: |
+          git config --local user.email jrman@risebroadband.net
+          git config --local user.name jrman
+
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
