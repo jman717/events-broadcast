@@ -6,7 +6,7 @@ name: Node.js Package
 on:
   workflow_run:
     workflows:
-      - node.js
+      - Node.js CI
     types:
       - completed
 
