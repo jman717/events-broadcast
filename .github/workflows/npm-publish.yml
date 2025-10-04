@@ -14,11 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Set Git User Identity
-        run: |
-          git config --local user.email jrman@risebroadband.net
-          git config --local user.name jrman
-
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -35,6 +30,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+      - run: npm login
       - run: npm ci
       - run: npm publish
         env:
