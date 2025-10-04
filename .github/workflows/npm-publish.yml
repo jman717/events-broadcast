@@ -1,8 +1,11 @@
 name: Publish package to npm
 
 on:
-  release:
-    types: [created]
+  workflow_run:
+    workflows:
+      - Node.js CI
+    types:
+      - completed
 
 jobs:
   build:
