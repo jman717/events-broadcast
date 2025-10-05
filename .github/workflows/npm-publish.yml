@@ -33,7 +33,6 @@ jobs:
       - run: npm run basic
     # Publish to npm (append `--access public` for scoped packages)
 
-      - run: npm adduser --registry=https://npm.pkg.github.com/ --always-auth
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
