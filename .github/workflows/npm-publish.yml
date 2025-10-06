@@ -6,19 +6,28 @@ on:
       - Node.js CI
     types:
       - completed
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Check out the repo'
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
-      - name: 'Install Node.js'
-        uses: actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8 # v3.7.0
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
-          registry-url: 'https://registry.npmjs.org'
-          # Defaults to the user or organization that owns the workflow file
-          scope: '@org'
+          node-version: 20
+      - run: npm ci
+      - run: npm test
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+          
       - name: Install dependencies
         run: npm ci
       - name: Build the package
