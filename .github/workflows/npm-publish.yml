@@ -33,7 +33,7 @@ jobs:
       - name: Build the package
         run: npm test
       - run: npm run basic
-      - run: npm config set "//registry.npmjs.org/:_authToken" "\${{ secrets.NPM_TOKEN }}" --location=project
+      - run: npm config set "//registry.npmjs.org/:_authToken" "\${ secrets.NPM_TOKEN }" --location=project
       - name: Publish package on NPM 📦
         run: npm publish --access public --tag latest
         env:
