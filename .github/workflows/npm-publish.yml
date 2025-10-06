@@ -31,7 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build the package
-        run: npm run build
+        run: npm test
+      - run: npm run basic
       - run: npm config set "//registry.npmjs.org/:_authToken" "\${NODE_AUTH_TOKEN}" --location=project
       - name: Publish package on NPM 📦
         run: npm publish --access public --tag latest
