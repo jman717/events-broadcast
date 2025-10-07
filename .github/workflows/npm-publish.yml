@@ -30,12 +30,14 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-      - name: Build the package
-        run: npm test
-      - run: npm run basic
-      - run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-      - name: Publish package on NPM 📦
-        run: npm publish --access public
+      - run: |
+          git checkout $CI_COMMIT_REF_NAME
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "@tenado"
+          SPACE_CHAR=" "
+          npx standard-version --releaseCommitMessageFormat "chore(release):${SPACE_CHAR}{{currentTag}}"
+          git push --follow-tags origin $CI_COMMIT_REF_NAME
+          npm publish --access public        
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm config delete "//registry.npmjs.org/:_authToken" --location=project
