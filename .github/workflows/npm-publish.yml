@@ -27,6 +27,8 @@ jobs:
         with:
           node-version: 18
       - run:  |
+          git config --global user.email "jrman@risebroadband.net"
+          git config --global user.name "jman717"
           git checkout $CI_COMMIT_REF_NAME
           npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
           npm config set scope "@tenado"
