@@ -34,9 +34,8 @@ jobs:
         run: npm test
       - run: npm run basic
       - run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-      - name: Publish package on NPM 📦
-        run: npm cache clean --force
-      - run: npm publish --access public
+        name: Publish package on NPM 📦
+      - run: npm publish --registry=https://${GITLAB_REGISTRY} --loglevel warn
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm config delete "//registry.npmjs.org/:_authToken" --location=project
