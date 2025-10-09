@@ -2,19 +2,18 @@ const assert = require('assert'),
     jsonHasDifferences = require('compare-json-difference'),
     packagejson = require('../package.json')
 
-const packageMock = {
+const packageMock ={
   "author": {
     "name": "jim manton"
   },
-  "version": "3.0.113",
+  "version": "3.0.115",
   "bundleDependencies": [],
   "dependencies": {
     "chai": "^5.0.0",
     "colors": "^1.4.0",
     "compare-json-difference": "^0.1.3",
     "log4js-tagline": "^5.3.27",
-    "mocha": "^10.2.0",
-    "npm-publish": "^0.0.1"
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "start": "node app.js",
