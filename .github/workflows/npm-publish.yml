@@ -33,10 +33,10 @@ jobs:
       - name: Build the package
         run: npm test
       - run: npm run basic
-      - run: npm adduser --registry=https://registry.npmjs.org
       - run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
       - name: Publish package on NPM 📦
-        run: npm publish --access public
+        run: npm cache clean --force
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm config delete "//registry.npmjs.org/:_authToken" --location=project
