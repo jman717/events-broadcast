@@ -34,10 +34,6 @@ jobs:
           npm config set scope "@tenado"
           SPACE_CHAR=" "
           npx standard-version --releaseCommitMessageFormat "chore(release):${SPACE_CHAR}{{currentTag}}"
-          git push --follow-tags origin $CI_COMMIT_REF_NAME
-          npm config set registry https://registry.npmjs.org/
-          npm login
-          npm init --scope=@jman717
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
