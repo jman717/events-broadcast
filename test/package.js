@@ -6,7 +6,7 @@ const packageMock = {
   "author": {
     "name": "jim manton"
   },
-  "version": "3.0.136",
+  "version": "3.0.137",
   "bundleDependencies": [],
   "dependencies": {
     "chai": "^5.0.0",
@@ -20,9 +20,6 @@ const packageMock = {
     "basic": "node ./tests/basic",
     "functions": "node ./tests/run_function",
     "test": "mocha"
-  },
-  "publishConfig": {
-    "@company:registry": "https://gitlab.com/api/v4/projects/project_id/packages/npm/"
   },
   "keywords": [
     "logging",
