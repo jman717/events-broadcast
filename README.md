@@ -13,12 +13,6 @@ Installation
 npm install events-broadcast
 ```
 
-Mocha Test
----------
-```
-npm test
-```
-
 General Setup Tests. 
 ---------
 ```
